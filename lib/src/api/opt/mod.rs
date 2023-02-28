@@ -172,7 +172,7 @@ where
 	}
 }
 
-pub(crate) fn from_json(json: JsonValue) -> sql::Value {
+pub fn from_json(json: JsonValue) -> sql::Value {
 	match sql::json(&json.to_string()) {
 		Ok(value) => value,
 		// It shouldn't get to this as `JsonValue` will always produce valid JSON

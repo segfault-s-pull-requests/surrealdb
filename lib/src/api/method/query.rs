@@ -129,7 +129,7 @@ pub(crate) type QueryResult = Result<Vec<Value>>;
 
 /// The response type of a `Surreal::query` request
 #[derive(Debug)]
-pub struct Response(pub(crate) IndexMap<usize, QueryResult>);
+pub struct Response(pub IndexMap<usize, QueryResult>);
 
 impl Response {
 	/// Takes and returns records returned from the database
