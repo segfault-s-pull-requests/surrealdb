@@ -123,6 +123,13 @@ where
 		}
 		self
 	}
+
+	pub fn bind_raw(mut self, key: &str, value: Value) -> Self {
+		if let Ok(current) = &mut self.bindings {
+			current.insert(key.to_string(), value);
+		}
+		self
+	}
 }
 
 pub(crate) type QueryResult = Result<Vec<Value>>;
